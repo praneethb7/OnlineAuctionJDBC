@@ -1,5 +1,7 @@
 package model;
 
+import java.time.LocalDateTime;
+
 public class Item {
     private int itemId;
     private String itemName;
@@ -7,14 +9,20 @@ public class Item {
     private double startPrice;
     private double reservePrice;
     private int sellerId;
+    private LocalDateTime auctionStartTime;
+    private LocalDateTime auctionEndTime;
 
-    public Item(int itemId,String itemName, String description, double startPrice, double reservePrice, int sellerId) {
+    public Item(int itemId, String itemName, String description, double startPrice,
+            double reservePrice, int sellerId,
+            LocalDateTime auctionStartTime, LocalDateTime auctionEndTime) {
         this.itemId = itemId;
-        this.description = description;
         this.itemName = itemName;
+        this.description = description;
+        this.startPrice = startPrice;
         this.reservePrice = reservePrice;
         this.sellerId = sellerId;
-        this.startPrice = startPrice;
+        this.auctionStartTime = auctionStartTime;
+        this.auctionEndTime = auctionEndTime;
     }
 
     public int getItemId() {
@@ -59,5 +67,21 @@ public class Item {
 
     public void setSellerId(int sellerId) {
         this.sellerId = sellerId;
+    }
+
+    public LocalDateTime getAuctionStartTime() {
+        return auctionStartTime;
+    }
+
+    public void setAuctionStartTime(LocalDateTime auctionStartTime) {
+        this.auctionStartTime = auctionStartTime;
+    }
+
+    public LocalDateTime getAuctionEndTime() {
+        return auctionEndTime;
+    }
+
+    public void setAuctionEndTime(LocalDateTime auctionEndTime) {
+        this.auctionEndTime = auctionEndTime;
     }
 }
