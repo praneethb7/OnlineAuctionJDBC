@@ -12,17 +12,16 @@ public class Item {
     private LocalDateTime auctionStartTime;
     private LocalDateTime auctionEndTime;
 
-    public Item(int itemId, String itemName, String description, double startPrice,
-            double reservePrice, int sellerId,
-            LocalDateTime auctionStartTime, LocalDateTime auctionEndTime) {
+    public Item(int itemId, String itemName, String description, double startPrice, double reservePrice,
+                LocalDateTime auctionStartTime, LocalDateTime auctionEndTime, int sellerId) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.description = description;
         this.startPrice = startPrice;
         this.reservePrice = reservePrice;
-        this.sellerId = sellerId;
         this.auctionStartTime = auctionStartTime;
         this.auctionEndTime = auctionEndTime;
+        this.sellerId = sellerId;
     }
 
     public int getItemId() {
