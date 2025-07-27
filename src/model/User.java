@@ -35,10 +35,6 @@ public class User {
         return lastName;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -54,5 +50,4 @@ public class User {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
 }
